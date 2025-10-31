@@ -1,6 +1,6 @@
 # analyzer.py
 import pandas as pd
-from helpers import calculate_total, format_currency
+from helper import calculate_total, format_currency
 
 # Read data
 df = pd.read_csv('data/sales.csv')
@@ -21,6 +21,6 @@ for index, row in df.iterrows():
     print(f"{row['product']}: {formatted_total}")
 
 # Show grand total
-grand_total = df['total'].sum()
+
 formatted_grand_total = format_currency(grand_total)
 print(f"\nGrand Total: {formatted_grand_total}")
